@@ -14,6 +14,7 @@ class DurationUnitFormat {
     this._format = options.format || (this.isTimer ? '{minutes}:{seconds}' : '{seconds}');
     this._fields = options.fields || [
       'year',
+      'month',
       'week',
       'day',
       'hour',
@@ -181,6 +182,7 @@ const SPLIT_POINTS = /(\{value\}|\{unit\})/;
 
 const SECONDS_IN = {
   year: 24 * 60 * 60 * 365,
+  month: 24 * 60 * 60 * 30,
   week: 24 * 60 * 60 * 7,
   day: 24 * 60 * 60,
   hour: 60 * 60,
